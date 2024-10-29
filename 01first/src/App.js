@@ -1,15 +1,39 @@
-import './App.css';
+import { useState } from 'react'
+import './App.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <button onclick='click me!'> I am button</button>
+  const [count, setCount] = useState(0)
 
-      </header>
+  const removevalue =()=>{
+    if (count>0) {
+      setCount(count-1);
+    }
+  }
+  const reset=()=>{
+    setCount(0);
+  }
+  const addvalue=()=>{
+    if (count<20) {
+      setCount(count+1);
+    }
+  }
+  return (
+    <>
+      
+      <div className="card">
+      <h1>Counter Example</h1>
+        <h3>Counter Value {count}</h3>
+        <button onClick={addvalue}>
+          Add Value{count}
+        </button><br></br>
+        <button onClick={removevalue}>
+        Remove Value {count}
+        </button><br></br>
+        <button onClick={reset}>Reset :{count}</button>
+       
     </div>
-  );
+    </>
+  )
 }
 
-
-export default App;
+export default App

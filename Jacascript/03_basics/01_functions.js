@@ -43,9 +43,25 @@
 
 //Arrow Function
 
-const myNewArray =[200,400,100,600];
+// const myNewArray =[200,400,100,600];
 
-function returnSecondValue(getArray) {
-    return getArray[1];    
+// function returnSecondValue(getArray) {
+//     return getArray[1];    
+// }
+// console.log(returnSecondValue(myNewArray));
+
+
+//access the function 
+
+console.log(Mohan(10));
+
+function Mohan(increment) {
+   return increment +1;
+}    // without store in variable but access before initialization 
+
+
+// funtion store in variable but Cannot access  before initialization
+const Mohan1 = function(increment){
+    return increment +1;
 }
-console.log(returnSecondValue(myNewArray));
+console.log(Mohan1(88));

@@ -1,16 +1,22 @@
-import React from 'react'
-function Fooditem(props) {
-   
-  return (
-    <>
-    <ul className=" m-6 ">
-      
-      {props.items.map((item)=>{
-        return <li className="border m-2 p-4 text-xl" key={item}>{item}</li>
-      })}
-    </ul>
-    </>
-  )
+// import React from 'react'
+import Item from './Item'
+
+function Fooditem({items}) {
+    // const handleBuyButtonclicked = (e)=>{
+    //     console.log(e);
+    //     console.log(`${Item} beign bought`)
+  
+// }
+ return(
+  <>
+   {items.map((item)=>{ 
+    return( 
+    <Item fooditems={item } handleBuyButtonclicked ={()=> console.log(`${item } bought`)} />
+    )
+   })}
+  </>
+ )
+  
 }
 
 export default Fooditem

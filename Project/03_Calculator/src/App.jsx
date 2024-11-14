@@ -1,15 +1,29 @@
+import { useState } from "react";
 import Buttoncontainer from "./components/Buttoncontainer";
 import Display from "./components/Display";
 
 function App() {
 
-  const button =['C','1','2','+','3','4','-','5','6','*','7','8','/','=','9','0','.',]
+    const [calvalue, setCalvalue] = useState("");
+    const onbuttonClick = (buttonclick) =>{
+      if (buttonclick === 'C') {
+        setCalvalue("");
+      }else if( buttonclick === '='){
+        const result = eval(calvalue);
+        setCalvalue(result);
+      }else{
+        setCalvalue(calvalue + buttonclick);
+      }
+    }
+
+  
+ 
   return (
     <center>
       <div className="border border-black w-80 p-6 m-10">
        
-          <Display ></Display>
-          <Buttoncontainer value={button}/>
+          <Display calvalue ={calvalue} ></Display>
+          <Buttoncontainer onbuttonClick ={onbuttonClick} />
       </div>
     </center>
   );

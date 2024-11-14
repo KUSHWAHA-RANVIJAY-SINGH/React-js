@@ -1,0 +1,17 @@
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.display{
+  margin: 80px;
+}
+
+/* .increment{
+  margin-left: 40px;
+}
+.decrement{
+  margin-right: 40px;
+} */

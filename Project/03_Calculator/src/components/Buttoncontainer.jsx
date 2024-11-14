@@ -1,11 +1,12 @@
 import React from "react";
-function Buttoncontainer(props){
+function Buttoncontainer({onbuttonClick}){
+  const button =['C','1','2','+','3','4','-','5','6','*','7','8','/','=','9','0','.']
     return (
          
         <div className="grid grid-cols-3 gap-2">
-        {props.value.map((item)=>{
+        {button.map((item)=>{
            return (
-            <button className="border border-slate-500 rounded p-2">{item}</button>
+            <button onClick={()=>onbuttonClick(item)} className="border border-slate-500 rounded p-2">{item}</button>
            )
         })}
    

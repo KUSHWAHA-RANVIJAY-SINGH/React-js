@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Display() {
+function Display({calvalue}) {
   return (
-    <input type="text" id="display" className="border border-slate-600  p-4 m-4  "/>
+    <input  value={calvalue} type="text" id="display" className="border border-slate-600  p-4 m-4  "/>
   )
 }
 

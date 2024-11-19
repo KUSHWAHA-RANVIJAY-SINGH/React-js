@@ -8,11 +8,14 @@ export const PostList = createContext({
 
 const postListReducer = (currPostList ,action) =>{
     let newPostList = currPostList;
-    if (action.type === "ADD_POST") {
+    if (action.type === "DELETE_POST") {
         newPostList =currPostList.filter(
             (post) => post.id !== action.payload.postId
         );
+    }else if(action.type === 'ADD_POST'){
+        newPostList =[action.payload,...currPostList]
     }
+ return newPostList;
 }
 
 const PostListProvider = ({children}) => {
@@ -33,8 +36,13 @@ const PostListProvider = ({children}) => {
        });
     }
     
-    const deletePost =() =>{
-
+    const deletePost =(postId) =>{
+        dispatchPostList({
+            type :"DELETE_POST",
+            payload : {
+                postId,
+            },
+        })
     }
 
     return (

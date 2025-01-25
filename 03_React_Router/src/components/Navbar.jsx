@@ -1,7 +1,9 @@
 import React from 'react'
 import img from '../assets/react.svg';
 import {NavLink} from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';function Navbar() {
+import { useNavigate } from 'react-router-dom';
+
+function Navbar() {
   const navigate = useNavigate();
 
   const handleclick =()=>{
@@ -18,6 +20,8 @@ import { useNavigate } from 'react-router-dom';function Navbar() {
        <NavLink to='/Product'><li>Products</li></NavLink>
        <NavLink to='/Contact'><li>Contact</li></NavLink>
        <NavLink to='/About'><li>About</li></NavLink>
+       <NavLink to='/jobs'><li>Jobs</li></NavLink>
+
   </ul>
   </div>
   </div>

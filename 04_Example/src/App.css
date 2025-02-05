@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.login-text{
+    font-size: 24px;
+    text-align: center;
+}
+.login-con{
+   background-color: aliceblue;
+   padding: 10px;
+   border: 2px solid black;
+   /* height: 80%; */
+   width: 30%;
+   border-radius: 20px;
+}
+.login{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-left: 100px;
+    gap: 10px;
+    border-radius: 4px;
+}
+.login-text{
+ display: flex;   
+ justify-content: space-around;
+ gap: 5px;
+}
+button{
+    size: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: black;
+    text-decoration: solid;
+    color: white;
+    
+}
+input{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+.login-text  .active {
+    background-color: blue;
+}
+
+.textupper{
+    text-align: center;
+    margin:20px 0px 20px 0px ;
+}
+
+.logsin{
+    /* height: 50; */
+    width: 100%;
+}

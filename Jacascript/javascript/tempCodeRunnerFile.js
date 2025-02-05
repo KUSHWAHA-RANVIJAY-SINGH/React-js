@@ -1,1 +1,0 @@
-person.name = 'Ranvijay Kushwaha'

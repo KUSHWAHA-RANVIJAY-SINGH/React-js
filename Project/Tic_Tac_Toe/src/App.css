@@ -1,0 +1,56 @@
+.board-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.board{
+  margin-top: 5%;
+}
+.body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 10px;
+  width: 400px;
+}
+.square{
+  width: 80px;
+  height: 80px;
+  border: 1px solid black;
+  margin: 2px;
+  font: bold;
+  font-size: 24px;
+}
+.heading{
+  text-align: center;
+}
+
+.reset{
+  margin-top: 25px;
+  border: 2px solid black;
+  font-size: 24px;
+  padding: 5px;
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+.resethead{
+  text-align: center;
+}
+.reset:hover{
+  background-color: #333;
+
+}
+.winner{
+  font-size: 24px;
+  text-align: center;
+  padding: 10px;
+}

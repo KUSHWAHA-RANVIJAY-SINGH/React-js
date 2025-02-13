@@ -15,6 +15,9 @@ function Navbar() {
                 <li>
                     <Link to='/compoent_3'>compoent_3</Link>
                 </li>
+                <li>
+                    <Link to='/compoent_4'>compoent_4</Link>
+                </li>
             </ul>
         </nav>
         <Outlet/>

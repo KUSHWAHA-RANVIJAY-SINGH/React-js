@@ -2,7 +2,6 @@ import React, { useReducer } from 'react'
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 import Reducer from './Reducer'
-Reducer
 const initialValue =0;
 function ReducerHook() {
     const [state,dispatch] = useReducer(Reducer,initialValue);

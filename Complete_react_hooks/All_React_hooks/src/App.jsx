@@ -1,7 +1,7 @@
 // import Parent from './components/Props/Parent'
 import './App.css'
-import CustomHook from './components/CustomHook/CustomHook'
-// import UseCallback from './components/UseCallback/UseCallback'
+// import CustomHook from './components/CustomHook/CustomHook'
+import UseCallback from './components/UseCallback/UseCallback'
 // import MemoHook from './components/UseMemo/MemoHook'
 // import ReducerHook from './components/UseReducer/ReducerHook'
 // import UseRef from './components/UseRef/UseRef'
@@ -27,9 +27,9 @@ function App() {
       {/* <UseRef1/> */}
 
       {/* <MemoHook/> */}
-      {/* <UseCallback/> */}
+      <UseCallback/>
 
-      <CustomHook/>
+      {/* <CustomHook/> */}
 
     </>
   )

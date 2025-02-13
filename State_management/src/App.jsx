@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Navbar from './components/UseContext/Navbar';
 import Compoent_2 from './components/UseContext/Compoent_2';
 import Compoent_3 from './components/UseContext/Compoent_3';
+import Compoent_4 from './components/UseContext/Compoent_4';
 
 export const UserContext = createContext();
 
@@ -18,12 +19,10 @@ function App() {
    <BrowserRouter>
     <Routes>
       <Route path='/' element={<Navbar/>}>
-        
-   
    <Route index element={<Compoent_1/>}/>
-  
         <Route path='compoent_2' element={<Compoent_2/>}/>
         <Route path='component_3' element={<Compoent_3/>}/>
+        <Route path='compoent_4' element={<Compoent_4/>}/>
       </Route>
     </Routes>
    </BrowserRouter>

@@ -20,11 +20,15 @@ function App() {
  
   return (
     <center>
+     <h1 className="font-bold text-4xl mt-10">Calculator</h1>
       <div className="border border-black w-80 p-6 m-10">
        
           <Display calvalue ={calvalue} ></Display>
           <Buttoncontainer onbuttonClick ={onbuttonClick} />
       </div>
+      <footer className="fixed bottom-0 w-full bg-slate-400 p-4 text-center ">
+        <p className="text-[#f2e9e4] text-xl mt-4">Made with ❤️ by <a href="https://github.com/KUSHWAHA-RANVIJAY-SINGH" target="_blank" rel="noopener noreferrer">Ranvijay Singh</a></p>
+      </footer>
     </center>
   );
 }

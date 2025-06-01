@@ -1,40 +1,63 @@
-import React from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import './LoginFrom.css';
+import { FaRegUserCircle } from "react-icons/fa";
+import { CiLock , CiMail} from "react-icons/ci";
+import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
 
-function Login() {
-  const navigate = useNavigate();
-  const constusername = 'RanvijaySingh';
-  const constpassword = '123456';
-  const [username, setUsername] = React.useState('');
-  const [password, setPassword] = React.useState('');
 
-  const handlesubmit = (event)=>{
-    event.preventDefault();
-    if(username === constusername && password === constpassword){
-        navigate('/home');   
-    }else{
-      alert('Invalid username or password');
-    }
-  }
+const LoginForm = () => {
 
+    const [action , setAction] = useState("Login");
   return (
-    <div>
-     <div>
-     </div>
-     <h2 className='loginheader'>Login Page</h2>
-     <div className='loginform'>
-        <form className='login' onSubmit={handlesubmit}>
-            <label>Username:</label>
-            <input type="text" name="username" onChange={(e)=>setUsername(e.target.value)} required/>
-            <br/>
-            <label>Password:</label>
-            <input type="password" name="password" onChange={(e)=>setPassword(e.target.value)} required/>
-            <br/>
-            <button type="submit">Login</button>
-        </form>
-     </div>
-    </div>
-  )
-}
+    <div className = 'wrapper'>
+        <form action = "">
+            <h1>{action}</h1>
 
-export default Login
+            {action ==="Login"?<div></div>: <div className = "input-box">
+                <input type = "text" placeholder='Name' required />
+                <MdOutlineDriveFileRenameOutline  className='icon'/>
+            </div> }
+           {action==="Login"?<div></div>:
+            <div className = "input-box">
+                <input type = "email" placeholder='Mail' required />
+                <CiMail  className='icon'/>
+            </div>}
+            
+
+            
+
+            <div className = "input-box">
+                <input type = "text" placeholder='Username' required />
+                <FaRegUserCircle className='icon'/>
+            </div>
+
+            
+
+            <div className = "input-box">
+                <input type = "password" placeholder='Password' required />
+                <CiLock className='icon'/>
+            </div>
+
+            {action==="Sign Up"?<div></div>:<div className = "remember-forgot">
+                <lable>
+                    <input type='checkbox' />Remember me</lable>
+                    <a href='#'>Forgot Password? </a>
+            </div>}
+
+            
+
+            <button type = {action==="Login"?"submit gray":"submit"} onClick={()=>{setAction("Login")}}>Login</button>
+
+            {action==="Sign Up"?<div className='register-link'>Already have an account? <a href='#'>Login</a></div>: <div className = {action==="Sign Up"?"submit gray":"submit"} onClick={()=>{setAction("Sign Up")}}>
+                <p>Don't have an account? <a href='#'>Sign Up</a></p>
+            </div>}
+
+            
+
+        </form>
+
+    </div>
+  );
+};
+
+export default LoginForm;
